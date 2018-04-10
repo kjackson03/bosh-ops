@@ -26,6 +26,14 @@ instance_groups:
         backends: ((harbor_backends))
         hostnames: ((harbor_hostnames))
         insecure_skip_verify: true
+      - acme_url: ((acme_url))
+        backends: ((controller_backends))
+        hostnames: ((controller_hostnames))
+        insecure_skip_verify: true
+      - acme_url: ((acme_url))
+        backends: ((vcenter_backends))
+        hostnames: ((vcenter_hostnames))
+        insecure_skip_verify: true
     release: instant-https
   name: https_proxy
   networks:
