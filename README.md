@@ -144,7 +144,7 @@ $ bosh-ops/deployments/concourse/bin/interpolate
 
 # Set CredHub vars
 $ credhub set -n /bosh/concourse/credhub_tls -t certificate -r <(bosh int bosh-secrets/bosh/creds.yml --path /credhub_tls/ca)
-$ credhub set -n /bosh/concourse/github_client -t user -z 'some-user' -w 'some-pass' # github auth client_id & client_secretFinished dinner hectic night
+$ credhub set -n /bosh/concourse/github_client -t user -z 'some-user' -w 'some-pass' # github auth client_id & client_secret
 $ credhub set -n /bosh/concourse/uaa_ssl -t certificate -r <(bosh int bosh-secrets/bosh/creds.yml --path /uaa_ssl/ca)
 $ credhub set -n /bosh/concourse/uaa_clients_concourse_to_credhub -t password -w $(bosh int bosh-secrets/bosh/creds.yml --path /uaa_clients_concourse_to_credhub)
 
