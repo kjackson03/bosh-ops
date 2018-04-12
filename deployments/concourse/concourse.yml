@@ -17,8 +17,8 @@ instance_groups:
       external_url: ((external_url))
       github_auth:
         authorize:
-        - organization: ((github_org))
-          teams: ((github_teams))
+        #- organization: ((github_org))
+        #  teams: ((github_teams))
         client_id: ((github_client.username))
         client_secret: ((github_client.password))
       log_level: debug
