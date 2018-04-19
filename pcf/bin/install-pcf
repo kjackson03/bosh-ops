@@ -26,7 +26,7 @@ cat "${repo}/tmp/pcf-pipelines/install-pcf/vsphere/pipeline.yml" \
     | yaml-patch -o "${repo}/pcf/ops-files/install-pcf.yml" \
     > "${repo}/pcf/install-pcf-pipeline.yml"
 
-fly -t prod set-pipeline \
+fly -t homelab set-pipeline \
     -p install-pcf \
     -c "${repo}/pcf/install-pcf-pipeline.yml" \
     -l "${base}/bosh-secrets/pcf/install-pcf-params.yml"
