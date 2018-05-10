@@ -50,12 +50,8 @@ instance_groups:
       #  hostnames: ((vcenter_hostnames))
       #  insecure_skip_verify: true
       - acme_url: ((acme_url))
-        backends: ((fortune_ui_backends))
-        hostnames: ((fortune_ui_hostnames))
-        insecure_skip_verify: true
-      - acme_url: ((acme_url))
-        backends: ((fortune_backend_backends))
-        hostnames: ((fortune_backend_hostnames))
+        backends: ((nsx_backends))
+        hostnames: ((nsx_hostnames))
         insecure_skip_verify: true
   vm_type: micro
   stemcell: default
