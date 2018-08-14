@@ -37,10 +37,10 @@ instance_groups:
         acme_url: ((acme_url))
         websocket: true
         insecure_skip_verify: true
-      #- hostnames: ((harbor_hostnames))
-      #  backends: ((harbor_backends))
-      #  acme_url: ((acme_url))
-      #  insecure_skip_verify: true
+      - hostnames: ((harbor_hostnames))
+        backends: ((harbor_backends))
+        acme_url: ((acme_url))
+        insecure_skip_verify: true
       - acme_url: ((acme_url))
         backends: ((controller_backends))
         hostnames: ((controller_hostnames))
@@ -49,10 +49,6 @@ instance_groups:
       #  backends: ((vcenter_backends))
       #  hostnames: ((vcenter_hostnames))
       #  insecure_skip_verify: true
-      - acme_url: ((acme_url))
-        backends: ((nsx_backends))
-        hostnames: ((nsx_hostnames))
-        insecure_skip_verify: true
   vm_type: micro
   stemcell: default
 
