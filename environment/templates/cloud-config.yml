@@ -103,7 +103,7 @@ networks:
     - 8.8.8.8
     gateway: ((internal_gw))
     range: ((internal_cidr))
-    reserved: ((reserved_ips))
+    reserved: []
     static: []
   type: manual
 # vm_extensions:
