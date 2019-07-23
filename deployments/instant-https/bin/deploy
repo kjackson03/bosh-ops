@@ -26,7 +26,6 @@ popd > /dev/null
 # Generated manifest
 manifest="${repo}/deployments/instant-https/instant-https.yml"
 
-bosh -e prod interpolate "${repo}/deployments/instant-https/templates/instant-https.yml" \
 bosh -e prod interpolate "${repo}/tmp/instant-https-deployment/instant-https.yml" \
   > "$manifest"
 
@@ -35,7 +34,6 @@ echo "Generating manifest: $manifest"
 
 bosh -e prod deploy -d instant-https \
   --vars-file "${base}/bosh-secrets/vars-instant-https.yml" \
-  "${repo}/deployments/instant-https/instant-https.yml" \
   "${manifest}" \
   "$@"
 
