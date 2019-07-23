@@ -14,10 +14,10 @@ if [[ ! -d "${repo}/tmp/instant-https-deployment" ]] ; then
 fi
 
 # checkout specific version of instant-https-deployment
-REF="62e189b08a044f3e848f5132a31ef3b862319751"
+REF="7c015167402547dad58371910d0fd47d4d1c8bf6"
 echo "Checking out to instant-https-deployment to ref: ${REF}"
 
-pushd ${repo}/tmp/concourse-deployment > /dev/null
+pushd ${repo}/tmp/instant-https-deployment > /dev/null
   git fetch &> /dev/null
   git checkout ${REF} &> /dev/null
   git log -1 --pretty=oneline
